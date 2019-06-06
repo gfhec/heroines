@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	//Задание 6
+	// Скопируйте код, который вы написали в прошлом задании сюда
+
+	//Создайте ключ shoot в каждом объекте, который является функцией
+	//при вызове функции в консоли, передаем аргументом любого игрока и у него уменьшается hp на 10
+	let array = [{
+		name:"ricardo",
+		hp:"99999999999",
+		power:"flex",
+		url:"ricardo.jpg",
+		shoot: function(){
+			array[0].hp = array[0].hp - 10
+		}
+	},{
+		name:"batman",
+		hp:"1",
+		power:"money",
+		url:"batman.jpg",
+		shoot: function(){
+			array[1].hp = array[1].hp - 10
+		}
+	},{
+		name:"mk",
+		hp:"11",
+		power:"11",
+		url:"MK.jpg",
+		shoot: function(){
+			array[2].hp = array[2].hp - 10
+		}
+	}]
+
+	for(let index = 0; index<3; index = index + 1){
+
+	let elem = document.createElement("img")
+	document.body.appendChild(elem)
+	elem.src = array[index].url  
+	elem.style.height = "200px";
+    elem.style.width = "400px";
+
+    let hh1 = document.createElement("h1")
+	document.body.appendChild(hh1)
+	hh1.innerHTML = array[index].name
+	hh1.style.height = "100px"
+	hh1.style.width = "200px"
+
+    let hh2 = document.createElement("h1")
+	document.body.appendChild(hh2)
+	hh2.innerHTML = array[index].hp
+	hh2.style.height = "100px"
+	hh2.style.width = "200px"
+	hh2.style.marginTop = "50px"
+
+    let hh3 = document.createElement("h1")
+	document.body.appendChild(hh3)
+	hh3.innerHTML = array[index].power
+	hh3.style.height = "100px"
+	hh3.style.width = "200px"
+	hh3.style.marginTop = "75px"
+
+	}
+
+
+</script>
+</body>
+</html>
